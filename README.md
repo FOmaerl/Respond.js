@@ -90,3 +90,5 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 
 ###Tips
 <b>always link stylesheets or write inline CSS before js scripts.</b>
+
+`respond.js`下载地址：[https://github.com/Neveryu/Respond.js/blob/master/respond.js](https://github.com/Neveryu/Respond.js/blob/master/respond.js).
