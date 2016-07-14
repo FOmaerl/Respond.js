@@ -45,13 +45,13 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 
 ###文档提示
 在官方文档当中的一些提示：
-1、越早的引入respond.js文件，也就越可能避免IE下出现的闪屏。
-2、不支持嵌套的媒体查询
-3、utf-8的字符编码对respond.js文件的运行有影响
+* 越早的引入respond.js文件，也就越可能避免IE下出现的闪屏。
+* 不支持嵌套的媒体查询
+* utf-8的字符编码对respond.js文件的运行有影响
 官方API原文：if CSS files are encoded in UTF-8 with Byte-Order-Mark, they will not work with Respond.js in IE7 or IE8.
 基本含义就是：utf-8格式的CSS文件字符编码会对插件造成影响。
 但是在我使用IE6-8进行测试的时候，都能够正常显示（无论是在css文件中增加charset设置还是在link标签中增加charset设置）。因此，并不是太清楚这个位置bug的含义。
-4、跨域可能会出现闪屏（还没有测试，具体情况不详）
+* 跨域可能会出现闪屏（还没有测试，具体情况不详）
 
 ###NOTE
 * #####Respond.js 和 跨域（cross-domain） CSS 的问题
