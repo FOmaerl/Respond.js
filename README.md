@@ -73,8 +73,9 @@ Respond.js不支持通过@import引入的CSS文件。例如，Drupal一般被配
 由于我们的静态资源都是要放在cdn的，responds.js也给出了跨域方法，即引入代理页面。
     //把cross-domain/respond-proxy.html 放到cdn上
     //把cross-domain/respond.proxy.gif 放到当前域服务器上
-    <!-- Respond.js proxy on external server -->
-    <link href="http://externalcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+    
+        <!-- Respond.js proxy on external server -->
+        <link href="http://externalcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
 
     <!-- Respond.js redirect location on local server -->
     <link href="/path/to/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
