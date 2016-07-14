@@ -57,7 +57,7 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 * #####Respond.js 和 跨域（cross-domain） CSS 的问题
     如果Respond.js和CSS文件被放在不同的域名或子域名下面（例如，使用CDN）时需要一些额外的设置。请参考Respond.js文档获取详细信息。
 * #####Internet Explorer 8 与 box-sizing
-    IE8不能完全支持box-sizing: border-box;与min-width、max-width、min-height或max-height一同使用。由于此原因，从Bootstrap v3.0.1版本开始，我们不再为.container使用max-width。
+IE8不能完全支持box-sizing: border-box;与min-width、max-width、min-height或max-height一同使用。由于此原因，从Bootstrap v3.0.1版本开始，我们不再为.container使用max-width。
 * #####IE兼容模式
     Bootstrap不支持IE的兼容模式。为了让IE浏览器运行最新的渲染模式，建议将此 标签加入到你的页面中：
             `<meta http-equiv="X-UA-Compatible" content="IE=Edge">`
@@ -65,7 +65,6 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 
 * #####Respond.js和@import
 Respond.js不支持通过@import引入的CSS文件。例如，Drupal一般被配置为通过@import引入CSS文件，Respond.js对其将无法起到作用。
-
 
 ###Tips
 从respond.js的工作原理可以知道，它将head中所有外部引入的CSS文件路径取出来存储到一个数组当中；然后遍历数组，并一个个发送AJAX请求；可以看出这里必须依赖ajax请求css路径才能得到css文件中的mediaquery的内容，那ajax的跨域问题就要解决了；
