@@ -56,7 +56,9 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 ###NOTE
 
 * #####Respond.js 和 跨域（cross-domain） CSS 的问题
+
     如果Respond.js和CSS文件被放在不同的域名或子域名下面（例如，使用CDN）时需要一些额外的设置。请参考Respond.js文档获取详细信息。
+
 * #####Internet Explorer 8 与 box-sizing
 
     IE8不能完全支持`box-sizing: border-box;`与`min-width`、`max-width`、`min-height`或`max-height`一同使用。由于此原因，从Bootstrap v3.0.1版本开始，我们不再为`.container`使用`max-width`。
