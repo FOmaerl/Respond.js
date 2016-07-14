@@ -65,3 +65,23 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 
 * #####Respond.js和@import
 Respond.js不支持通过@import引入的CSS文件。例如，Drupal一般被配置为通过@import引入CSS文件，Respond.js对其将无法起到作用。
+
+
+###Tips
+从respond.js的工作原理可以知道，它将head中所有外部引入的CSS文件路径取出来存储到一个数组当中；然后遍历数组，并一个个发送AJAX请求；可以看出这里必须依赖ajax请求css路径才能得到css文件中的mediaquery的内容，那ajax的跨域问题就要解决了；
+
+由于我们的静态资源都是要放在cdn的，responds.js也给出了跨域方法，即引入代理页面。
+    //把cross-domain/respond-proxy.html 放到cdn上
+    //把cross-domain/respond.proxy.gif 放到当前域服务器上
+    <!-- Respond.js proxy on external server -->
+    <link href="http://externalcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
+
+    <!-- Respond.js redirect location on local server -->
+    <link href="/path/to/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+
+    <!-- Respond.js proxy script on local server -->
+    <script src="/path/to/respond.proxy.js"></script>
+
+
+###Tips
+<b>always link stylesheets or write inline CSS before js scripts.</b>
