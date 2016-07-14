@@ -1,5 +1,5 @@
 # Respond.js
-Respond.js让不支持css3 Media Query的浏览器包括IE6-IE8等其他浏览器支持查询。
+Respond.js让不支持css3 Media Query的浏览器包括IE6-IE8等其他浏览器支持媒体查询。
 
 Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它不支持 CSS3 Media Queries 的浏览器提供媒体查询的 `min-width` 和 `max-width`特性，实现响应式网页设计（Responsive Web Design）。
 
@@ -35,11 +35,11 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 
 ###核心结论
 那么此时，就可以根据基本的实现思路，得到一些书写代码时要注意的地方：
-1、需要启动本地服务器（localhost），不能使用普通本地的url地址（file://开头）；
-2、需要外部引入CSS文件，将CSS样式书写在style中是无效的；
-3、由于respond插件是查找CSS文件，再进行处理，所以respond文件一定要放置在CSS文件的后面
-4、另外，虽然把respond放置在head里还是在body后面都能够实现，但是建议放置在head中（具体原因在下面的文档提示中有提到）
-5、最好不要为CSS设置utf-8的编码，使用默认（原因详见下面的文档提示部分）
+* 需要启动本地服务器（localhost），不能使用普通本地的url地址（file://开头）；
+* 需要外部引入CSS文件，将CSS样式书写在style中是无效的；
+* 由于respond插件是查找CSS文件，再进行处理，所以respond文件一定要放置在CSS文件的后面
+* 另外，虽然把respond放置在head里还是在body后面都能够实现，但是建议放置在head中（具体原因在下面的文档提示中有提到）
+* 最好不要为CSS设置utf-8的编码，使用默认（原因详见下面的文档提示部分）
 
 
 
