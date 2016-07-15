@@ -4,7 +4,7 @@ Respond.js让不支持css3 Media Query的浏览器包括IE6-IE8等其他浏览�
 Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它不支持 CSS3 Media Queries 的浏览器提供媒体查询的 `min-width` 和 `max-width`特性，实现响应式网页设计（Responsive Web Design）。
 
 响应式布局，理想状态是，对PC/移动各种终端进行响应。媒体查询的支持程度是IE9+以及其他现代的浏览器，但是IE8在市场当中仍然占据了比较大量的市场份额，使我们不得不进行IE低端浏览器的考虑。那么如何在IE6~8浏览器中兼容响应式布局呢？
-这里我们需要借助这样一个文件：respond.js。
+这里我们需要借助这样一个文件：`respond.js`.
 
 文件下载地址：[https://github.com/Neveryu/Respond.js/blob/master/respond.js](https://github.com/Neveryu/Respond.js/blob/master/respond.js).
 
