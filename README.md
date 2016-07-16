@@ -16,8 +16,8 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 既然要实现响应式网页，那么就需要用到媒体查询，媒体查询的核心是`min-width` 和 `max-width`,而IE8以下以及一些其它的浏览器不支持这两个属性，<b>respond.js</b>是怎么做的呢？
 
 * 将head中所有外部引入的CSS文件路径取出来存储到一个数组当中；
-* 遍历数组，并一个个发送AJAX请求；
-* AJAX回调后，分析response中的`media query`的`min-width`和`max-width`语法（注意，仅仅支持`min-width`和`max-width`），分析出viewport变化区间对应相应的css块；
+* 遍历数组，并一个个发送<b>AJAX</b>请求；
+* <b>AJAX</b>回调后，分析<b>response</b>中的`media query`的`min-width`和`max-width`语法（注意，仅仅支持`min-width`和`max-width`），分析出viewport变化区间对应相应的css块；
 * 页面初始化时和`window.resize`时，根据当前`viewport`使用相应的css块。
 
 ###使用方法
@@ -30,7 +30,7 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
         <![endif]—>
     </head>
 <span style="color: red;">讲道理，我们是应该将js文件放在html文件的最后，但是<b>repond.js</b>文件，我还是建议你将它放在`head`中，并且放在css文件的后面。</span>
-越早引入越好，在IE下面看到页面闪屏的概率就越低，因为最初css会先渲染出来，如果<b>respond.js</b>加载得很后面，这时重新根据`media query`解析出来的css会再改变一次页面的布局等，所以看起来有闪屏的现象
+越早引入越好，在IE下面看到页面闪屏的概率就越低，因为最初css会先渲染出来，如果<b>respond.js</b>加载得很后面，这时重新根据`media query`解析出来的css会再改变一次页面的布局等，所以看起来有闪屏的现象.
 
 
 ###核心结论
@@ -48,8 +48,8 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 * 越早的引入respond.js文件，也就越可能避免IE下出现的闪屏。
 * 不支持嵌套的媒体查询
 * utf-8的字符编码对respond.js文件的运行有影响
-官方API原文：if CSS files are encoded in UTF-8 with Byte-Order-Mark, they will not work with Respond.js in IE7 or IE8.
-基本含义就是：utf-8格式的CSS文件字符编码会对插件造成影响。
+官方API原文：`if CSS files are encoded in UTF-8 with Byte-Order-Mark, they will not work with Respond.js in IE7 or IE8.`
+基本含义就是：<b>utf-8格式的CSS文件字符编码会对插件造成影响</b>
 但是在我使用IE6-8进行测试的时候，都能够正常显示（无论是在css文件中增加charset设置还是在link标签中增加charset设置）。因此，并不是太清楚这个位置bug的含义。
 * 跨域可能会出现闪屏（还没有测试，具体情况不详）
 
@@ -87,6 +87,9 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
     <!-- Respond.js proxy script on local server -->
     <script src="/path/to/respond.proxy.js"></script>
 
+
+###其他的支持响应式布局的插件-css3-dediaqueries.js
+`css3-mediaqueries.js`支持几乎所有的`media query`的语法。会出现闪屏。并不是很推荐使用，虽然能够支持全部的`mediaqueries`,但`min-width`和`max-width`其实就可以满足我们对响应式布局的需要。
 
 ###Tips
 <b>always link stylesheets or write inline CSS before js scripts.</b>
