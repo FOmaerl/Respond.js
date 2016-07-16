@@ -8,17 +8,17 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 
 文件下载地址：[https://github.com/Neveryu/Respond.js/blob/master/respond.js](https://github.com/Neveryu/Respond.js/blob/master/respond.js).
 
-自己在阅读了官方文档之后，进行了一系列测试。友情提示各位朋友，关于respond.js的使用，有一些需要注意的地方，一旦不注意，在IE6-8中就无法显示出来。
+自己在阅读了官方文档之后，进行了一系列测试。友情提示各位朋友，关于<b>respond.js</b>的使用，有一些需要注意的地方，一旦不注意，在IE6-8中就无法显示出来。
 
 
 
 ###插件原理
-既然要实现响应式网页，那么就需要用到媒体查询，媒体查询的核心是`min-width` 和 `max-width`,而IE8以下以及一些其它的浏览器不支持这两个属性，respond.js是怎么做的呢？
+既然要实现响应式网页，那么就需要用到媒体查询，媒体查询的核心是`min-width` 和 `max-width`,而IE8以下以及一些其它的浏览器不支持这两个属性，<b>respond.js</b>是怎么做的呢？
 
 * 将head中所有外部引入的CSS文件路径取出来存储到一个数组当中；
 * 遍历数组，并一个个发送AJAX请求；
-* AJAX回调后，分析response中的media query的min-width和max-width语法（注意，仅仅支持min-width和max-width），分析出viewport变化区间对应相应的css块；
-* 页面初始化时和window.resize时，根据当前viewport使用相应的css块。
+* AJAX回调后，分析response中的`media query`的`min-width`和`max-width`语法（注意，仅仅支持`min-width`和`max-width`），分析出viewport变化区间对应相应的css块；
+* 页面初始化时和`window.resize`时，根据当前`viewport`使用相应的css块。
 
 ###使用方法
 考虑到IE9是支持CSS3的，所以直接在HTML页面的head标签中添加脚本引入即可：
@@ -29,15 +29,15 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
           <script src="js/respond.js"></script>
         <![endif]—>
     </head>
-<span style="color: red;">讲道理，我们是应该将js文件放在html文件的最后，但是repond.js文件，我还是建议你将它放在`head`中，并且放在css文件的后面。</span>
-越早引入越好，在IE下面看到页面闪屏的概率就越低，因为最初css会先渲染出来，如果respond.js加载得很后面，这时重新根据media query解析出来的css会再改变一次页面的布局等，所以看起来有闪屏的现象
+<span style="color: red;">讲道理，我们是应该将js文件放在html文件的最后，但是<b>repond.js</b>文件，我还是建议你将它放在`head`中，并且放在css文件的后面。</span>
+越早引入越好，在IE下面看到页面闪屏的概率就越低，因为最初css会先渲染出来，如果<b>respond.js</b>加载得很后面，这时重新根据`media query`解析出来的css会再改变一次页面的布局等，所以看起来有闪屏的现象
 
 
 ###核心结论
 那么此时，就可以根据基本的实现思路，得到一些书写代码时要注意的地方：
 * 需要启动本地服务器（localhost），不能使用普通本地的url地址（file://开头）；
 * 需要外部引入CSS文件，将CSS样式书写在style中是无效的；
-* 由于respond插件是查找CSS文件，再进行处理，所以respond文件一定要放置在CSS文件的后面
+* 由于`respond`插件是查找CSS文件，再进行处理，所以`respond`文件一定要放置在CSS文件的后面
 * 另外，虽然把respond放置在head里还是在body后面都能够实现，但是建议放置在head中（具体原因在下面的文档提示中有提到）
 * 最好不要为CSS设置utf-8的编码，使用默认（原因详见下面的文档提示部分）
 
