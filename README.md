@@ -93,6 +93,7 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 
 ###补充一点
 if CSS files are encoded in UTF-8 with Byte-Order-Mark,they will not work with Repond.js in IE7 or IE8.
+<br/>
 也就是说保存格式应该是utf-8无BOM格式，BOM会影响程序对文档的处理，正常的utf-8文档应该没事。
 
 
