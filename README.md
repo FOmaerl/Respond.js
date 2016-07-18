@@ -91,6 +91,11 @@ Respond.js 是一个快速、轻量的 polyfill，用于为 IE6-8 以及其它�
 ###其他的支持响应式布局的插件-css3-dediaqueries.js
 `css3-mediaqueries.js`支持几乎所有的`media query`的语法。会出现闪屏。并不是很推荐使用，虽然能够支持全部的`mediaqueries`,但`min-width`和`max-width`其实就可以满足我们对响应式布局的需要。
 
+###补充一点
+if CSS files are encoded in UTF-8 with Byte-Order-Mark,they will not work with Repond.js in IE7 or IE8.
+也就是说保存格式应该是utf-8无BOM格式，BOM会影响程序对文档的处理，正常的utf-8文档应该没事。
+
+
 ###Tips
 <b>always link stylesheets or write inline CSS before js scripts.</b>
 
